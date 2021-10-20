@@ -11,7 +11,7 @@ NHN Pipeline  Devtools Pipeline 이용한 CICD
 ### 2. 빌드할 소스코드 선택
 > * 빌드할 소스가 있는 소스 저장소 설정
 > * jenkins 빌드 시 해당 STEP 건너뛰기
-![](이미지/생성1.파이프라인정보.png)
+![](이미지/생성2.소스설정.png)
 
 ### 3. 빌드도구 선택
 #### - jenkins를 활용할 경우
@@ -61,7 +61,7 @@ docker login cbb06093-kr1-registry.container.cloud.toast.com
 # username : info100@injeinc.co.kr (NHN cloud 아이디) Password : Container Registry 화면 URL & Appkey 버튼 클릭시 확인가능
 docker push cbb06093-kr1-registry.container.cloud.toast.com/maven-soob:latest
 ```
-> * `현재 해당 스테이지에서 503 error 발생하여 확인중` <br> 
+> * **현재 해당 스테이지에서 503 error 발생하여 확인중** <br> 
 ![](이미지/생성3.빌드설정(NHN).png) <br>
 
 
@@ -124,12 +124,12 @@ kubectl create -f secret_deploy_service.yaml
 	}
 }
 ```
-![](생성4.배포설정.png)
+![](이미지/생성4.배포설정.png)
 
 ### 5. 자동 실행 설정
 > * 자동 실행 유형 : GitHub / 이미지 저장소 (webhooks 등록 필요)
 > * 설정한 GitHub 레포지토리에 이벤트 발생 or 이미지 저장소의 특정 이미지 UPDATE 시 해당 파이프라인이 자동으로 실행됨
-> * 단, 파이프라인의 자동 실행 방지는 `미사용` 으로 설정되어 있어야 함 <br>
+> * 단, 파이프라인의 자동 실행 방지는 **미사용** 으로 설정되어 있어야 함 <br>
 ![](이미지/자동실행설정.png)
 ![](이미지/자동실행설정_webhooks등록.png)
 
