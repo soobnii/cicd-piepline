@@ -50,21 +50,6 @@ node {
 ![](이미지/생성3.빌드설정.png)
 
 
-#### - NHN 빌드도구를 활용할 경우
-> * NHN 빌드도구는 별도의 SW (ex. Jenkins) 설치 없이 소스 코드 빌드, 이미지 생성 및 업로드 과정을 수행할 수 있음 <br> 
-> * 단, 이미지 저장소에 빌드에 사용할 컨테이너 이미지가 업로드 되어 있어야 함 (ex. maven)
-> 
-```
-docker pull maven:3.8-jdk-8-openj9
-docker tag maven:3.8-jdk-8-openj9 cbb06093-kr1-registry.container.cloud.toast.com/maven-soob
-docker login cbb06093-kr1-registry.container.cloud.toast.com 
-# username : info100@injeinc.co.kr (NHN cloud 아이디) Password : Container Registry 화면 URL & Appkey 버튼 클릭시 확인가능
-docker push cbb06093-kr1-registry.container.cloud.toast.com/maven-soob:latest
-```
-> * **현재 해당 스테이지에서 503 error 발생하여 확인중** <br> 
-![](이미지/생성3.빌드설정(NHN).png) <br>
-
-
 ### 4. 배포 환경 선택
 > * 쿠버네티스 클러스터 선택 및 이미지 배포방식 설정 <br>
 > * yaml 형식으로 입력
