@@ -1,5 +1,5 @@
-# nhn-pipline
-NHN Pipeline  Devtools Pipeline 이용한 CICD
+# pipline
+NHN Pipeline Devtools Pipeline > Jenkins 연계한 CICD
 
 ## pipeline 생성 과정 및 운영
 
